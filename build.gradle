@@ -61,9 +61,9 @@ tasks.register('integrationTest', Test) {
 
     testClassesDirs = sourceSets.integrationTest.output.classesDirs
     classpath = sourceSets.integrationTest.runtimeClasspath
-    shouldRunAfter test
+    //shouldRunAfter test
 }
-check.dependsOn integrationTest
+//check.dependsOn integrationTest
 
 tasks.named('test') {
     useJUnitPlatform()

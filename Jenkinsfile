@@ -10,5 +10,11 @@ pipeline {
                 sh "./gradlew build -Pversion=${BUILD_NUMBER}"
             }
         }
+        stage('Acceptance') {
+                    steps {
+                        echo 'Acceptance stage'
+                        sh "./gradlew integrationTest"
+                    }
+                }
     }
 }
