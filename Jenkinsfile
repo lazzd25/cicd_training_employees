@@ -7,7 +7,7 @@ pipeline {
         stage('Commit') {
             steps {
                 echo 'Commit stage'
-                sh "./gradlew build"
+                sh "./gradlew build -Pversion=${BUILD_NUMBER}"
             }
         }
     }
