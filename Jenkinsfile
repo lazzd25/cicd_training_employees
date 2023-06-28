@@ -7,7 +7,7 @@ pipeline {
         stage('Commit') {
             steps {
                 echo 'Commit stage'
-                sh "./gradlew build"
+                sh "./mvnw -B package"
             }
         }
     }
