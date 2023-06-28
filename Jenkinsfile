@@ -7,7 +7,6 @@ pipeline {
         stage('Commit') {
             steps {
                 echo 'Commit stage'
-                sh "cd emloyees"
                 sh "./gradlew build"
             }
         }
