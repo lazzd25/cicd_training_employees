@@ -37,7 +37,7 @@ public class EmployeesController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "Creates an employee")
+    @Operation(summary = "Creates an Employee")
     @ApiResponse(responseCode = "201", description = "employee has been created")
     public ResponseEntity<EmployeeDto> createEmployee(@Valid @RequestBody CreateEmployeeCommand command, UriComponentsBuilder uri) {
         EmployeeDto employeeDto = employeesService.createEmployee(command);
